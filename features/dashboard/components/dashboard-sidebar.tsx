@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 
-
 import { DASHBOARD_ROUTES } from "@/features/dashboard/lib/routes";
 import { DashboardNav } from "./dashboard-nav";
 import { SidebarUserButton } from "@/features/dashboard/components/sidebar-user-button";
@@ -44,7 +43,7 @@ export function DashboardSidebar({ user, plan = "Pro" }: DashboardSidebarProps) 
                     />
                   </span>
                   <span className="grid flex-1 text-left leading-tight group-data-[collapsible=icon]:hidden">
-                    <span className="truncate font-medium">ChaiCodeAIReview</span>
+                    <span className="truncate font-medium">Peer Review</span>
                    
                   </span>
                 </Link>

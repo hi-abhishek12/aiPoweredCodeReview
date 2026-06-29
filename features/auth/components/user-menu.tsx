@@ -78,13 +78,18 @@ export function UserMenu({
   const displayName = getDisplayName(user);
 
   const handleSignOut = async () => {
-    await authClient.signOut({
-      fetchOptions: {
-        onSuccess: () => {
-          router.push(SIGN_IN_PATH);
+    try {
+      await authClient.signOut({
+        fetchOptions: {
+          onSuccess: () => {
+            router.push(SIGN_IN_PATH);
+          },
         },
-      },
-    });
+      });
+    } catch (error) {
+      console.log(error);
+      throw new Error('error in sign out');
+    }
   };
 
   return (

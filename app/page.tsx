@@ -6,8 +6,8 @@ import Image from "next/image";
 
 export default function Home() {
   const {data} = authClient.useSession();
-  console.log(data?.user);
-  console.log(data?.session)
+  // console.log('user data',data?.user);
+  // console.log('user session',data?.session)
 
   return (
     <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">

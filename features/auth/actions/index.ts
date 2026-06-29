@@ -33,7 +33,7 @@ export async function getCurrentUserSession() {
 
 export async function requireAuth(redirectTo = SIGN_IN_PATH) {
     const session = await getCurrentUserSession();
-    console.log(`session`,session)
+    
 
     if(!session){
         redirect(redirectTo);
